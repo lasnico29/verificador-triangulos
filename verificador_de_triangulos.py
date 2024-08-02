@@ -13,6 +13,12 @@ def main():
         b = float(input("Lado B: "))
         c = float(input("Lado C: "))
 
+        # Verificar que ninguno de los lados sea cero
+        if a == 0 or b == 0 or c == 0:
+            
+            print("Error: Los lados de un triángulo no pueden ser cero. Por favor, ingrese valores válidos.")
+            continue
+
         tipo = determinar_tipo_triangulo(a, b, c)
         print(f"El triángulo es {tipo}.")
 
@@ -20,6 +26,7 @@ def main():
         if otra_vez != 's':
             print("Gracias por usar el programa. ¡Adiós!")
             break
+
 
 if __name__ == "__main__":
     main()
